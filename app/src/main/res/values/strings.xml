@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Students</string>
+
+    <string name="groups_label">Group</string>
+    <string name="student_details_label">Student details</string>
+    <string name="update_student_profile_label">Update student profile</string>
+
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="registration">Registration</string>
+    <string name="first_name">First name</string>
+    <string name="surname">Surname</string>
+    <string name="second_name">Second name</string>
+    <string name="group">Group</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="contacts">Contacts</string>
+    <string name="journal">Journal</string>
+</resources>
