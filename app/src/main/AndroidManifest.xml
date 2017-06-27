@@ -16,14 +16,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".View.GroupsActivity"
-                  android:label="@string/group"/>
+        <activity
+            android:name=".View.GroupsActivity"
+            android:label="@string/group" />
         <activity android:name=".View.StudentsActivity" />
         <activity android:name=".View.StudentDetailsActivity" />
-        <activity android:name=".View.RegistrationActivity"
-                  android:label="@string/registration"/>
-        <activity android:name=".View.UpdateStudentActivity"
-                  android:label=""></activity>
+        <activity
+            android:name=".View.RegistrationActivity"
+            android:label="@string/registration" />
+        <activity
+            android:name=".View.UpdateStudentActivity"
+            android:label="" />
+        <activity android:name=".View.AdminActivity" />
+        <activity android:name=".View.JournalsActivity"></activity>
     </application>
 
 </manifest>

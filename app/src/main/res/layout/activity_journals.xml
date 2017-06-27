@@ -8,17 +8,7 @@
     android:paddingRight="16dp"
     android:paddingTop="16dp"
     android:orientation="vertical"
-    tools:context="com.course.innopolis.students.View.GroupsActivity">
+    tools:context="com.course.innopolis.students.View.JournalsActivity">
 
-    <EditText
-        android:id="@+id/etGroupFilter"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-    <ListView
-        android:id="@+id/lvGroups"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    </ListView>
 
 </LinearLayout>

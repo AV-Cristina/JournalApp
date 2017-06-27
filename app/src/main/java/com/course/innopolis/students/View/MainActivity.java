@@ -4,15 +4,15 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
-import com.course.innopolis.students.Models.Contact;
-import com.course.innopolis.students.Models.ContactType;
-import com.course.innopolis.students.Models.Group;
-import com.course.innopolis.students.Models.Student;
+import com.course.innopolis.students.Model.Contact;
+import com.course.innopolis.students.Model.ContactType;
+import com.course.innopolis.students.Model.Group;
+import com.course.innopolis.students.Model.Student;
 import com.course.innopolis.students.R;
 
 import java.text.SimpleDateFormat;
@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class MainActivity extends Activity {
-
+    private static String admin = "admin";
     private EditText etLogin;
     private EditText etPassword;
     private Button bLogin;
@@ -42,8 +42,17 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View view) {
                 //attemptLogin();
-                Intent intent = new Intent(context, GroupsActivity.class);
-                context.startActivity(intent);
+                if (admin.equals(etLogin.getText().toString()) && admin.equals(etPassword.getText().toString()))
+                {
+                    // // TODO: Передавать флаг
+                    Log.i("LOG", "admin");
+                    Intent intent = new Intent(context, AdminActivity.class);
+                    context.startActivity(intent);
+                }
+                else{
+                    Intent intent = new Intent(context, GroupsActivity.class);
+                    context.startActivity(intent);
+                }
             }
         });
 
@@ -56,41 +65,6 @@ public class MainActivity extends Activity {
             }
         });
 
-        //////////////////////////////////////////////////////////////////////////
-        Group group1 = new Group(1l, "Android 01");
-        Group group2 = new Group(2l, "Java EE 01");
-        Group group3 = new Group(3l, "Java EE 02");
 
-
-        ArrayList<Contact> contacts = new ArrayList<>();
-        Contact contact1 = new Contact("@conor", ContactType.PHONE);
-        contacts.add(contact1);
-        Contact contact2 = new Contact("Conor@gmail.com", ContactType.EMAIL);
-        contacts.add(contact2);
-        Contact contact3 = new Contact("vk.com/conor", ContactType.VK);
-        contacts.add(contact3);
-        Contact contact4 = new Contact("@conor", ContactType.TELEGRAM);
-        contacts.add(contact4);
-        Contact contact5 = new Contact("conor", ContactType.SKYPE);
-        contacts.add(contact5);
-
-
-        SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
-        Date dateOfBirth = null;
-
-        try {
-            dateOfBirth = format.parse("01.02.1987");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        Student student1 = new Student("Conor", "John", "Reese", dateOfBirth, group1.getGroupId(), contacts);
-        //////////////////////////////////////////////////////////////////////////
-
-
-    }
-
-
-    public void fillLists (){
-       //////////////////////////////
     }
 }

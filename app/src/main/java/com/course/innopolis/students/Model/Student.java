@@ -1,4 +1,4 @@
-package com.course.innopolis.students.Models;
+package com.course.innopolis.students.Model;
 
 /**
  * Created by Cristina on 21.06.2017.
@@ -11,8 +11,8 @@ import java.util.List;
 
 
     public class Student implements Serializable {
-        private String firstName;
         private String surname;
+        private String firstName;
         private String secondName;
         private Date dateOfBirth;
         private final Long id;

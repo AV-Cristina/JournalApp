@@ -1,4 +1,4 @@
-package com.course.innopolis.students.Models;
+package com.course.innopolis.students.Model;
 
 import java.util.ArrayList;
 import java.util.Date;

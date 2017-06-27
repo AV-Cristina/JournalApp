@@ -1,4 +1,4 @@
-package com.course.innopolis.students.Models;
+package com.course.innopolis.students.Model;
 
 /**
  * Created by Cristina on 21.06.2017.
