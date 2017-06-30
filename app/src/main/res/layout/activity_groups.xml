@@ -8,17 +8,21 @@
     android:paddingRight="16dp"
     android:paddingTop="16dp"
     android:orientation="vertical"
-    tools:context="com.course.innopolis.students.View.GroupsActivity">
+    tools:context="com.course.innopolis.students.View.Lists.GroupsActivity">
 
-    <EditText
-        android:id="@+id/etGroupFilter"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+    <!--<FrameLayout-->
+        <!--android:id="@+id/fragmentLayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+        <!--&gt;-->
+    <!--</FrameLayout>-->
 
-    <ListView
-        android:id="@+id/lvGroups"
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.course.innopolis.students.Fragment.GroupsFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    </ListView>
+        android:layout_height="match_parent">
+    </fragment>
 
 </LinearLayout>

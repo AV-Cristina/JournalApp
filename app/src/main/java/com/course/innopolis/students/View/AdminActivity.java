@@ -9,12 +9,17 @@ import android.view.View;
 import android.widget.Button;
 
 import com.course.innopolis.students.R;
+import com.course.innopolis.students.View.Lessons.LessonsActivity;
+import com.course.innopolis.students.View.Lists.GroupsActivity;
+import com.course.innopolis.students.View.Lists.JournalsActivity;
+import com.course.innopolis.students.View.Students.StudentsActivity;
 
 public class AdminActivity extends Activity {
     private Context context;
     Button bGroups;
     Button bStudents;
     Button bJournals;
+    Button bLessons;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +42,15 @@ public class AdminActivity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, StudentsActivity.class);
+                context.startActivity(intent);
+            }
+        });
+
+        bLessons = (Button)findViewById(R.id.lessons);
+        bLessons.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(context, LessonsActivity.class);
                 context.startActivity(intent);
             }
         });

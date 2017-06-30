@@ -1,6 +1,8 @@
-package com.course.innopolis.students.View;
+package com.course.innopolis.students.View.Lists;
 
 import android.app.Activity;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Context;
 import android.os.Bundle;
 import android.text.Editable;
@@ -12,6 +14,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.course.innopolis.students.Control.GroupManager;
+import com.course.innopolis.students.Fragment.GroupsFragment;
 import com.course.innopolis.students.Model.Group;
 import com.course.innopolis.students.R;
 
@@ -19,10 +22,39 @@ import java.util.ArrayList;
 import java.util.Map;
 
 public class GroupsActivity extends Activity {
+    ArrayList<String> groupNames;
+
+    private GroupsFragment mGroupFragment;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_groups);
+
+        GroupManager gm = new GroupManager();
+        Map<Integer, Group> groups = gm.fillGroupList();
+
+        groupNames = new ArrayList<>();
+        for(int i = 0; i < gm.size(); i++){
+            groupNames.add(gm.getGroup(i).getName());
+        }
+
+        mGroupFragment = (GroupsFragment)getFragmentManager().findFragmentById(R.id.fragment);
+        mGroupFragment.setGroupNames(groupNames);
+        /*
+        // get an instance of FragmentTransaction from your Activity
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        GroupsFragment groupsFragment = new GroupsFragment();
+        fragmentTransaction.add(R.id.fragmentLayout, groupsFragment);
+        fragmentTransaction.commit();*/
+    }
+
+    /*
     Context context;
     EditText etGroupFilter;
     ListView lvGroups;
-
     ArrayList<String> groupNames;
 
     @Override
@@ -69,6 +101,6 @@ public class GroupsActivity extends Activity {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1, groupNames);
         lvGroups.setAdapter(adapter);
-    }
+    }*/
 
 }

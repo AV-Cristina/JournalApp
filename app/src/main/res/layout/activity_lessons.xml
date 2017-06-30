@@ -8,7 +8,15 @@
     android:paddingRight="16dp"
     android:paddingTop="16dp"
     android:orientation="vertical"
-    tools:context="com.course.innopolis.students.View.Students.StudentsActivity">
+    tools:context="com.course.innopolis.students.View.Lessons.LessonsActivity">
+
+    <Button
+        android:id="@+id/bAddLesson"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryDarkSB"
+        android:text="@string/add_lesson"/>
+
 
 
 </LinearLayout>

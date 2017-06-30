@@ -17,6 +17,16 @@
     <string name="groups">Groups</string>
     <string name="students">Students</string>
     <string name="journals">Journals</string>
+    <string name="lessons">Lessons</string>
+
+    <string name="add_lesson">Add lesson</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="description">Description</string>
+    <string name="title">Title</string>
+    <string name="set_time">Set time</string>
+    <string name="set_date">Set date</string>
+    <string name="submit">Submit</string>
 
     <string name="edit">Edit</string>
     <string name="delete">Delete</string>

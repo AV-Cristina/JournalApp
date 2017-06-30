@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/MyAppTheme">
         <activity android:name=".View.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,10 +17,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".View.GroupsActivity"
+            android:name=".View.Lists.GroupsActivity"
             android:label="@string/group" />
-        <activity android:name=".View.StudentsActivity" />
-        <activity android:name=".View.StudentDetailsActivity" />
+        <activity android:name=".View.Students.StudentsActivity" />
+        <activity android:name=".View.Students.StudentDetailsActivity" />
         <activity
             android:name=".View.RegistrationActivity"
             android:label="@string/registration" />
@@ -28,7 +28,9 @@
             android:name=".View.UpdateStudentActivity"
             android:label="" />
         <activity android:name=".View.AdminActivity" />
-        <activity android:name=".View.JournalsActivity"></activity>
+        <activity android:name=".View.Lists.JournalsActivity" />
+        <activity android:name=".View.Lessons.LessonsActivity" />
+        <activity android:name=".View.Lessons.AddLessonActivity"></activity>
     </application>
 
 </manifest>

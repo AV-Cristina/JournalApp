@@ -16,8 +16,8 @@ public class Lesson {
     private String auditoryNumber;
     private String description;
     private Long subjectId;
-    private String lector;
-    private List<Long> groupList;
+    private String lecturer;
+    //private List<Long> groupList;
 
     public String getLessonName() {
         return lessonName;
@@ -67,16 +67,16 @@ public class Lesson {
         this.subjectId = subjectId;
     }
 
-    public String getLector() {
-        return lector;
+    public String getLecturer() {
+        return lecturer;
     }
 
-    public void setLector(String lector) {
-        this.lector = lector;
+    public void setLecturer(String lecturer) {
+        this.lecturer = lecturer;
     }
 
     public Lesson(Long lessonId, String lessonName, Date dateBeg, Date dateEnd,
-                  String auditoryNumber, String description, Long subjectId, String lector) {
+                  String auditoryNumber, String description, Long subjectId, String lecturer) {
         this.lessonId = lessonId;
         this.lessonName = lessonName;
         this.dateBeg = dateBeg;
@@ -84,8 +84,8 @@ public class Lesson {
         this.auditoryNumber = auditoryNumber;
         this.description = description;
         this.subjectId = subjectId;
-        this.lector = lector;
-        this.groupList = new ArrayList<>();
+        this.lecturer = lecturer;
+        //this.groupList = new ArrayList<>();
     }
 
     @Override

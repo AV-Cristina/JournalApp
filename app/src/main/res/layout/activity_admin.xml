@@ -14,21 +14,28 @@
         android:id="@+id/groups"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/colorPrimaryDarkSB"
         android:text="@string/groups" />
 
     <Button
         android:id="@+id/students"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/colorPrimaryDarkSB"
         android:text="@string/students" />
 
     <Button
         android:id="@+id/journals"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/colorPrimaryDarkSB"
         android:text="@string/journals" />
+
+    <Button
+        android:id="@+id/lessons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryDarkSB"
+        android:text="@string/lessons" />
 
 </LinearLayout>

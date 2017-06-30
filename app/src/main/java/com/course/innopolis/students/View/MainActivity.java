@@ -9,15 +9,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.course.innopolis.students.Model.Contact;
-import com.course.innopolis.students.Model.ContactType;
-import com.course.innopolis.students.Model.Group;
-import com.course.innopolis.students.Model.Student;
 import com.course.innopolis.students.R;
+import com.course.innopolis.students.View.Students.StudentDetailsActivity;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
 
 public class MainActivity extends Activity {
     private static String admin = "admin";
@@ -41,7 +35,6 @@ public class MainActivity extends Activity {
         bLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //attemptLogin();
                 if (admin.equals(etLogin.getText().toString()) && admin.equals(etPassword.getText().toString()))
                 {
                     // // TODO: Передавать флаг
@@ -50,7 +43,7 @@ public class MainActivity extends Activity {
                     context.startActivity(intent);
                 }
                 else{
-                    Intent intent = new Intent(context, GroupsActivity.class);
+                    Intent intent = new Intent(context, StudentDetailsActivity.class);
                     context.startActivity(intent);
                 }
             }

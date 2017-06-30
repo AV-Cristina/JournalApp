@@ -16,26 +16,19 @@ import java.util.Map;
  */
 
 public class StudentManager {
-    private Map<Long, Student> students;
+    private Map<Integer, Student> students;
 
-    private StudentManager() {
+    public StudentManager() {
         this.students = new HashMap<>();
     }
 
-    public Map<Long, Student> fillStudentList() {
-
-
-        ///////////////////////////////////////////////////////////////////////////////////////////
-/* //this.students.put(i, )
-
-
+    public Map<Integer, Student> fillStudentList() {
         ArrayList<Contact> contacts = new ArrayList<>();
         contacts.add(new Contact("@alex", ContactType.PHONE));
         contacts.add(new Contact("Alex@gmail.com", ContactType.EMAIL));
         contacts.add(new Contact("vk.com/alex", ContactType.VK));
         contacts.add(new Contact("@alex", ContactType.TELEGRAM));
         contacts.add(new Contact("alex", ContactType.SKYPE));
-
 
         SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
         Date dateOfBirth = null;
@@ -45,21 +38,21 @@ public class StudentManager {
             e.printStackTrace();
         }
 
-        ArrayList<Student> studentsList = new ArrayList<>();
-        studentsList.add(new Student("Алексеев", "Александр", "Алексеевич", dateOfBirth, group1.getGroupId(), contacts));
-        studentsList.add(new Student("Иванова", "Ольга", "Александровна", dateOfBirth, group1.getGroupId(), contacts));
-        studentsList.add(new Student("Петов", "Петр", "Александрович", dateOfBirth, group1.getGroupId(), contacts));
-        studentsList.add(new Student("Петрова", "Светлана", "Игоревна", dateOfBirth, group2.getGroupId(), contacts));
-        studentsList.add(new Student("Иванов", "Иван", "Петрович", dateOfBirth, group2.getGroupId(), contacts));
-        studentsList.add(new Student("Петров", "Андрей", "Николаевич", dateOfBirth, group2.getGroupId(), contacts));
-        studentsList.add(new Student("Ветров", "Олег", "Павлович", dateOfBirth, group3.getGroupId(), contacts));
-        studentsList.add(new Student("Лисаков", "Константин", "Александрович", dateOfBirth, group3.getGroupId(), contacts));*/
-        ///////////////////////////////////////////////////////////////////////////////////////////
+        this.students.put(0, new Student("Алексеев", "Александр", "Алексеевич", dateOfBirth, 0L, contacts));
+        this.students.put(1, new Student("Иванова", "Ольга", "Александровна", dateOfBirth, 0L, contacts));
+        this.students.put(2, new Student("Петов", "Петр", "Александрович", dateOfBirth, 1L, contacts));
+        this.students.put(3, new Student("Петрова", "Светлана", "Игоревна", dateOfBirth, 2L, contacts));
+        this.students.put(4, new Student("Иванов", "Иван", "Петрович", dateOfBirth, 2L, contacts));
+        this.students.put(5, new Student("Петров", "Андрей", "Николаевич", dateOfBirth, 3L, contacts));
+        this.students.put(6, new Student("Ветров", "Олег", "Павлович", dateOfBirth, 3L, contacts));
+        this.students.put(7, new Student("Лисаков", "Константин", "Александрович", dateOfBirth, 4L, contacts));
+
+        //studentsList.add(new Student("Алексеев", "Александр", "Алексеевич", dateOfBirth, group1.getGroupId(), contacts));
 
         return students;
     }
 
-    public Map<Long, Student> getAll() {
+    public Map<Integer, Student> getAll() {
         return students;
     }
 
