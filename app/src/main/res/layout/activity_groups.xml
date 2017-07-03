@@ -8,7 +8,7 @@
     android:paddingRight="16dp"
     android:paddingTop="16dp"
     android:orientation="vertical"
-    tools:context="com.course.innopolis.students.View.Lists.GroupsActivity">
+    tools:context="com.course.innopolis.students.View.Group.GroupsActivity">
 
     <!--<FrameLayout-->
         <!--android:id="@+id/fragmentLayout"-->

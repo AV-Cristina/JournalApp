@@ -1,4 +1,4 @@
-package com.course.innopolis.students.View;
+package com.course.innopolis.students.View.Admin;
 
 import android.app.Activity;
 import android.content.Context;
@@ -9,10 +9,10 @@ import android.view.View;
 import android.widget.Button;
 
 import com.course.innopolis.students.R;
-import com.course.innopolis.students.View.Lessons.LessonsActivity;
-import com.course.innopolis.students.View.Lists.GroupsActivity;
-import com.course.innopolis.students.View.Lists.JournalsActivity;
-import com.course.innopolis.students.View.Students.StudentsActivity;
+import com.course.innopolis.students.View.Lesson.LessonsActivity;
+import com.course.innopolis.students.View.Group.GroupsActivity;
+import com.course.innopolis.students.View.Journal.JournalsActivity;
+import com.course.innopolis.students.View.Student.StudentsActivity;
 
 public class AdminActivity extends Activity {
     private Context context;

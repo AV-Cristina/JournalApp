@@ -11,12 +11,15 @@ import java.util.Map;
  * Created by Cristina on 23.06.2017.
  */
 
-public class GroupManager {
+public class GroupsManager {
     private Map<Integer, Group> groups;
+    private static Integer groupsCount = 0;
 
-    public GroupManager() {
+
+    public GroupsManager() {
         this.groups = new HashMap<>();
     }
+
 
     public Map<Integer, Group> fillGroupList() {
         this.groups.put(0, new Group(1l, "Android 01"));
@@ -26,7 +29,7 @@ public class GroupManager {
         this.groups.put(4, new Group(5l, "Java EE 04"));
         this.groups.put(5, new Group(6l, "C++ 01"));
         this.groups.put(6, new Group(7l, "Testing 01"));
-
+        groupsCount += 7;
         return this.groups;
     }
 

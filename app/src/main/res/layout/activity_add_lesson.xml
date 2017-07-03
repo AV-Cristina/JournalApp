@@ -8,7 +8,7 @@
     android:paddingRight="16dp"
     android:paddingTop="16dp"
     android:orientation="vertical"
-    tools:context="com.course.innopolis.students.View.Lessons.AddLessonActivity">
+    tools:context="com.course.innopolis.students.View.Lesson.AddLessonActivity">
 
     <TextView
         android:layout_width="match_parent"

@@ -1,4 +1,4 @@
-package com.course.innopolis.students.View.Lists;
+package com.course.innopolis.students.View.Journal;
 
 import android.app.Activity;
 import android.os.Bundle;

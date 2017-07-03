@@ -8,7 +8,7 @@
     android:paddingRight="16dp"
     android:paddingTop="16dp"
     android:orientation="vertical"
-    tools:context="com.course.innopolis.students.View.MainActivity">
+    tools:context="com.course.innopolis.students.View.LoginRegistration.MainActivity">
 
     <TextView
         android:layout_width="wrap_content"

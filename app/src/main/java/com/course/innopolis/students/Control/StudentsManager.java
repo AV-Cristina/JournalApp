@@ -15,12 +15,15 @@ import java.util.Map;
  * Created by Cristina on 23.06.2017.
  */
 
-public class StudentManager {
+public class StudentsManager {
     private Map<Integer, Student> students;
+    private static Integer studentsCount = 0;
 
-    public StudentManager() {
+
+    public StudentsManager() {
         this.students = new HashMap<>();
     }
+
 
     public Map<Integer, Student> fillStudentList() {
         ArrayList<Contact> contacts = new ArrayList<>();
@@ -46,11 +49,10 @@ public class StudentManager {
         this.students.put(5, new Student("Петров", "Андрей", "Николаевич", dateOfBirth, 3L, contacts));
         this.students.put(6, new Student("Ветров", "Олег", "Павлович", dateOfBirth, 3L, contacts));
         this.students.put(7, new Student("Лисаков", "Константин", "Александрович", dateOfBirth, 4L, contacts));
-
-        //studentsList.add(new Student("Алексеев", "Александр", "Алексеевич", dateOfBirth, group1.getGroupId(), contacts));
-
+        studentsCount += 8;
         return students;
     }
+
 
     public Map<Integer, Student> getAll() {
         return students;

@@ -1,4 +1,4 @@
-package com.course.innopolis.students.View.Students;
+package com.course.innopolis.students.View.Student;
 
 import android.app.Activity;
 import android.os.Bundle;

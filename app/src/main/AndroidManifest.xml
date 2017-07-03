@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/MyAppTheme">
-        <activity android:name=".View.MainActivity">
+        <activity android:name=".View.LoginRegistration.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,20 +17,20 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".View.Lists.GroupsActivity"
+            android:name=".View.Group.GroupsActivity"
             android:label="@string/group" />
-        <activity android:name=".View.Students.StudentsActivity" />
-        <activity android:name=".View.Students.StudentDetailsActivity" />
+        <activity android:name=".View.Student.StudentsActivity" />
+        <activity android:name=".View.Student.StudentDetailsActivity" />
         <activity
-            android:name=".View.RegistrationActivity"
+            android:name=".View.LoginRegistration.RegistrationActivity"
             android:label="@string/registration" />
         <activity
-            android:name=".View.UpdateStudentActivity"
+            android:name=".View.Student.UpdateStudentActivity"
             android:label="" />
-        <activity android:name=".View.AdminActivity" />
-        <activity android:name=".View.Lists.JournalsActivity" />
-        <activity android:name=".View.Lessons.LessonsActivity" />
-        <activity android:name=".View.Lessons.AddLessonActivity"></activity>
+        <activity android:name=".View.Admin.AdminActivity" />
+        <activity android:name=".View.Journal.JournalsActivity" />
+        <activity android:name=".View.Lesson.LessonsActivity" />
+        <activity android:name=".View.Lesson.AddLessonActivity"></activity>
     </application>
 
 </manifest>

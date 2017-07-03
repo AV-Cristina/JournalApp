@@ -11,6 +11,7 @@ import java.util.List;
 
 
     public class Student implements Serializable {
+        private String fullName;
         private String surname;
         private String firstName;
         private String secondName;
@@ -20,6 +21,7 @@ import java.util.List;
         private List<Contact> contacts;
 
         public Student(String firstName, String surname, String secondName, Date dateOfBirth, Long groupId, List<Contact> contacts) {
+            this.fullName = surname + " " + firstName + " " + secondName;
             this.firstName = firstName;
             this.surname = surname;
             this.secondName = secondName;
@@ -76,12 +78,6 @@ import java.util.List;
         public List<Contact> getContacts() {
             return contacts;
         }
-
-//        public List<Student> getStudentList() {
-//
-//            return list;
-//        }
-
 
         @Override
         public int hashCode() {

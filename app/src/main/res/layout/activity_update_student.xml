@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.course.innopolis.students.View.UpdateStudentActivity">
+    tools:context="com.course.innopolis.students.View.Student.UpdateStudentActivity">
 
 </android.support.constraint.ConstraintLayout>

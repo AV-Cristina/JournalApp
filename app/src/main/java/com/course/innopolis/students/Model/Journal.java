@@ -10,6 +10,13 @@ public class Journal {
     private Long lessonId;
     private boolean presence;
 
+    public Journal(Long id, Long studentId, Long lessonId, boolean presence) {
+        this.id = id;
+        this.studentId = studentId;
+        this.lessonId = lessonId;
+        this.presence = presence;
+    }
+
     public Long getId() {
         return id;
     }

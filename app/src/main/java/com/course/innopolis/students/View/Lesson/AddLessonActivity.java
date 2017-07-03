@@ -1,9 +1,10 @@
-package com.course.innopolis.students.View.Lessons;
+package com.course.innopolis.students.View.Lesson;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Context;
-import android.content.Intent;
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -31,7 +32,6 @@ public class AddLessonActivity extends AppCompatActivity {
             public void onDateSet(DatePicker datePicker, int year, int month, int dayOfMonth) {
                 //Toast.makeText(MainActivity.this, year + " " + month + " " + dayOfMonth, Toast.LENGTH_SHORT).show();
                 etDate.setText(dayOfMonth + "." +  month + "." + year);
-
             }
         };
         DatePickerDialog datePickerDialog = new DatePickerDialog(this, myListner, 2017, 5, 30);
@@ -49,6 +49,28 @@ public class AddLessonActivity extends AppCompatActivity {
         };
         TimePickerDialog timePickerDialog = new TimePickerDialog(this, myListner, 20, 10, true);
         timePickerDialog.show();
+    }
+
+
+    private void showAlert(){
+        AlertDialog.Builder myBuilder = new AlertDialog.Builder(this);
+        myBuilder.setMessage("Вы точно желаете добавить запись?");
+        myBuilder.setTitle("Добавление записи");
+        myBuilder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+                dialogInterface.dismiss();
+            }
+        });
+        myBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.cancel();
+            }
+        });
+        AlertDialog dialog = myBuilder.create();
+        dialog.show();
     }
 
 
@@ -86,6 +108,7 @@ public class AddLessonActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 //// TODO: 30.06.2017 Submit
+                showAlert();
             }
         });
 

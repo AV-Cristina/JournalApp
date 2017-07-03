@@ -8,7 +8,7 @@
     android:paddingRight="16dp"
     android:paddingTop="16dp"
     android:orientation="vertical"
-    tools:context="com.course.innopolis.students.View.Lists.JournalsActivity">
+    tools:context="com.course.innopolis.students.View.Journal.JournalsActivity">
 
 
 </LinearLayout>

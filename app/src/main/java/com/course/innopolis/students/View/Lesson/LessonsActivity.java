@@ -1,4 +1,4 @@
-package com.course.innopolis.students.View.Lessons;
+package com.course.innopolis.students.View.Lesson;
 
 import android.content.Context;
 import android.content.Intent;

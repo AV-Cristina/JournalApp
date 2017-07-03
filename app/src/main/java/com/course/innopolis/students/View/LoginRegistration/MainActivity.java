@@ -1,4 +1,4 @@
-package com.course.innopolis.students.View;
+package com.course.innopolis.students.View.LoginRegistration;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,7 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.course.innopolis.students.R;
-import com.course.innopolis.students.View.Students.StudentDetailsActivity;
+import com.course.innopolis.students.View.Admin.AdminActivity;
+import com.course.innopolis.students.View.Student.StudentDetailsActivity;
 
 
 public class MainActivity extends Activity {

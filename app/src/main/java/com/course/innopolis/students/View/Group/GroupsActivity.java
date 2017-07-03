@@ -1,19 +1,9 @@
-package com.course.innopolis.students.View.Lists;
+package com.course.innopolis.students.View.Group;
 
 import android.app.Activity;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
-import android.content.Context;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.util.Log;
-import android.widget.ArrayAdapter;
-import android.widget.EditText;
-import android.widget.ListView;
-import android.widget.Toast;
 
-import com.course.innopolis.students.Control.GroupManager;
+import com.course.innopolis.students.Control.GroupsManager;
 import com.course.innopolis.students.Fragment.GroupsFragment;
 import com.course.innopolis.students.Model.Group;
 import com.course.innopolis.students.R;
@@ -22,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Map;
 
 public class GroupsActivity extends Activity {
-    ArrayList<String> groupNames;
+    private ArrayList<String> groupNames;
 
     private GroupsFragment mGroupFragment;
 
@@ -31,7 +21,7 @@ public class GroupsActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_groups);
 
-        GroupManager gm = new GroupManager();
+        GroupsManager gm = new GroupsManager();
         Map<Integer, Group> groups = gm.fillGroupList();
 
         groupNames = new ArrayList<>();
@@ -62,7 +52,7 @@ public class GroupsActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_groups);
 
-        GroupManager gm = new GroupManager();
+        GroupsManager gm = new GroupsManager();
         Map<Integer, Group> groups = gm.fillGroupList();
 
         groupNames = new ArrayList<>();
