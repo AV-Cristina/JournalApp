@@ -16,8 +16,18 @@ public class GroupsManager {
     private static Integer groupsCount = 0;
 
 
-    public GroupsManager() {
+    private GroupsManager() {
         this.groups = new HashMap<>();
+    }
+
+
+    private static class GroupsManagerHolder {
+        private final static GroupsManager instance = new GroupsManager();
+    }
+
+
+    public static GroupsManager getInstance(){
+        return GroupsManagerHolder.instance;
     }
 
 

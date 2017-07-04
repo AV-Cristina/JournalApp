@@ -20,8 +20,18 @@ public class StudentsManager {
     private static Integer studentsCount = 0;
 
 
-    public StudentsManager() {
+    private StudentsManager() {
         this.students = new HashMap<>();
+    }
+
+
+    private static class StudentsManagerHolder {
+        private final static StudentsManager instance = new StudentsManager();
+    }
+
+
+    public static StudentsManager getInstance() {
+        return StudentsManagerHolder.instance;
     }
 
 

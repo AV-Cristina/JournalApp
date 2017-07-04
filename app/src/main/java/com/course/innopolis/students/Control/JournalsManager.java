@@ -14,8 +14,18 @@ public class JournalsManager {
     private static Integer journalsCount = 0;
 
 
-    public JournalsManager() {
+    private JournalsManager() {
         this.journals = new HashMap<>();
+    }
+
+
+    private static class JournalsManagerHolder {
+        private final static JournalsManager instance = new JournalsManager();
+    }
+
+
+    public static JournalsManager getInstance() {
+        return JournalsManagerHolder.instance;
     }
 
 

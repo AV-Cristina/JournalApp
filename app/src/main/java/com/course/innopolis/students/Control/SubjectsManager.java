@@ -14,8 +14,18 @@ public class SubjectsManager {
     private static Integer subjectsCount = 0;
 
 
-    public SubjectsManager() {
+    private SubjectsManager() {
         this.subjects = new HashMap<>();
+    }
+
+
+    private static class SubjectsManagerHolder {
+        private final static SubjectsManager instance = new SubjectsManager();
+    }
+
+
+    public static SubjectsManager getInstance(){
+        return SubjectsManagerHolder.instance;
     }
 
 

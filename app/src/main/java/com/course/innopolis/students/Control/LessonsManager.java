@@ -1,6 +1,7 @@
 package com.course.innopolis.students.Control;
 
 import com.course.innopolis.students.Model.Lesson;
+import com.course.innopolis.students.Model.Student;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -15,8 +16,19 @@ public class LessonsManager {
     private Map<Integer, Lesson> lessons;
     private static Integer lessonsCount = 0;
 
-    public LessonsManager() {
+
+    private LessonsManager() {
         this.lessons = new HashMap<>();
+    }
+
+
+    private static class LessonsManagerHolder {
+        private final static LessonsManager instance = new LessonsManager();
+    }
+
+
+    public static LessonsManager getInstance(){
+        return LessonsManagerHolder.instance;
     }
 
 
